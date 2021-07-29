@@ -1,8 +1,10 @@
 # Frontend
 Frontend provide a visualisation of analyzed results from the backend by using a set of open source libraries (Bootstrap, JQuery, Google chart, D3 and Plotly). 
 Frontend contains the dataset collected by backend and the visualisation Javascript webpages. To run frontend, open the below page with Chrome browsers:
-> categoryTermChartV2.html
-> patternWordTree.html
+
+> Cascade View: categoryTermChartV2.html
+
+> Tree View: patternWordTree.html
 
 ## Folder Structures:
 * Datasets 
