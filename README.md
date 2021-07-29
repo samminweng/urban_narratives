@@ -18,4 +18,6 @@ In terms of data workflow, the backend takes raw texts collected from CCTD datas
 * Chrome
 
 # Build Instruction
-Please refer to `README` in `backend` and `frontend` folders. 
+Please refer to `README` in `backend` and `frontend` folders respectively.
+
+
