@@ -15,3 +15,7 @@ In terms of data workflow, the backend takes raw texts collected from CCTD datas
 * Java (1.11)
 * Stanford NLPCore Toolkit (4.2.0)
 * Python packages: pandas, stanza, tqdm
+* Chrome
+
+# Build Instruction
+Please refer to `README` in `backend` and `frontend` folders. 
