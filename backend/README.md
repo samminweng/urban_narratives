@@ -1,5 +1,9 @@
 # Backend
-Backend consists of datasets, Python modules and Java module. 
+Backend consists of datasets, Python modules and Java module. To build the backend, run
+
+> python3 dataprocessing.py
+> 
+> python3 statistics.py
 
 ## Datasets
 - `glossaryTerms` folder stores the glossary of terms in relation to urban infrastructures.
