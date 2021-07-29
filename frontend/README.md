@@ -22,4 +22,4 @@ NLP dataset includes the public comments and linguistic meta-data processed by S
     - `/css`: CSS style sheets for Cascade and Tree views 
 
 * Third-party library:
-   - `/lib`: all the required libraries have been downloaded to `lib` folder.
+   - `/lib`: all the required libraries have been downloaded to `lib` folder, including Bootstrap (v5), D3.js (v5), JQuery (v3.5.1), JQuery mark.js (v.9), Google chart, pagination.js (v2.1.5) and plotly (v2.3.0).   
