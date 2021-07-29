@@ -20,3 +20,6 @@ NLP dataset includes the public comments and linguistic meta-data processed by S
 
 * Styles:
     - `/css`: CSS style sheets for Cascade and Tree views 
+
+* Third-party library:
+   - `/lib`: all the required libraries have been downloaded to `lib` folder.
