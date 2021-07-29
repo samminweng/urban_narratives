@@ -17,17 +17,17 @@ class Statistic:
         self.args = Namespace(
             case_name='shareAnIdea',
             keywords={
-                'space': ['area', 'cbd', 'city', 'center', 'centre', 'courtyard', 'piazza', 'park', 'place',
+                'Space': ['area', 'cbd', 'city', 'center', 'centre', 'courtyard', 'piazza', 'park', 'place',
                           'river', 'square', 'space', 'venue', 'christchurch'],
-                'transport': ['avenue', 'bike', 'bus', 'car', 'cycle', 'lane', 'parking', 'rail', 'shuttle', 'station',
+                'Transport': ['avenue', 'bike', 'bus', 'car', 'cycle', 'lane', 'parking', 'rail', 'shuttle', 'station',
                               'street', 'tram', 'traffic', 'transport', 'walkway', 'pedestrian', 'road', 'monorail',
                               'vehicle', 'truck'],
-                'building': ['apartment', 'building', 'hospital', 'market', 'office', 'quarter', 'retail', 'shop',
+                'Building': ['apartment', 'building', 'hospital', 'market', 'office', 'quarter', 'retail', 'shop',
                              'store', 'garden', 'housing', 'university', 'school', 'library', 'mall', 'cafe', 'bar',
                              'restaurant'],
-                'people': ['people', 'family', 'child', 'disability', 'community', 'shopping', 'art', 'sport',
+                'People': ['people', 'family', 'child', 'disability', 'community', 'shopping', 'art', 'sport',
                            'resident', 'health', 'safety', 'neighbourhood', 'tourist', 'activity', 'parent', 'owner'],
-                'pronouns': ['i', 'we', 'they', 'you', 'he', 'she', 'it', 'this', 'those', 'that', 'there', 'one',
+                'Pronouns': ['i', 'we', 'they', 'you', 'he', 'she', 'it', 'this', 'those', 'that', 'there', 'one',
                              'these']
             }
         )
@@ -134,13 +134,13 @@ class Statistic:
                                     phraseType, objectPhrase = PatternUtil.getObjectClause(text, verbWord)
                                 else:
                                     phraseType, objectPhrase = PatternUtil.getObjectPhrase(text, verbWord)
-                                objectCategory = PatternUtil.categorizePhrase(objectPhrase, self.args.keywords)
+                                objectCategory = PatternUtil.categorize_phrase(objectPhrase, self.args.keywords)
                                 sentenceDict[phraseType].append({
                                     "textId": text['id'], "sentId": sentId, "verb": verbWord,
                                     "subjectPhrase": subjectPhrase, "objectPhrase": objectPhrase,
                                     "objectCategory": objectCategory, "sentence": sentenceWords
                                 })
-        PatternUtil.extractPattern(sentenceDict)
+        PatternUtil.extractPattern(sentenceDict, self.args)
 
     # Extract the sentences for manual annotation
     def classify_text_category(self):
@@ -173,6 +173,6 @@ class Statistic:
 
 if __name__ == '__main__':
     statistic = Statistic()
-    statistic.collect_statistics()
-    # statistic.classify_text_category()
+    #statistic.collect_statistics()
+    statistic.extractPatternTree()
 

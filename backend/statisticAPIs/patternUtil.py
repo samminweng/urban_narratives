@@ -160,10 +160,10 @@ class PatternUtil:
             category_terms.append({"category": category, "terms": terms, "percent": proportion})
         category_df = pd.DataFrame(category_terms, columns=['category', 'terms', "percent"])
         # Write out to the JSON csv file
-        path = os.path.join('data', 'text', args.text_filename, 'categoryTerm.csv')
+        path = os.path.join('data', 'text', args.case_name, 'categoryTerm.csv')
         category_df.to_csv(path_or_buf=path, encoding='utf-8', index=False)
         # # Write to a json file
-        path = os.path.join('data', 'text', args.text_filename, 'categoryTerm.json')
+        path = os.path.join('data', 'text', args.case_name, 'categoryTerm.json')
         category_df.to_json(path, orient='records')
         # Print
         print("Extracting subjects and write outputs to {path} completes!".format(path=path))
@@ -197,7 +197,7 @@ class PatternUtil:
         return False
 
     @staticmethod
-    def extractPattern(sentenceDict):
+    def extractPattern(sentenceDict, args):
         # Group the sentences by pattern
         patterns = [{"name": "NP", "title": 'I/We want/need/like', "verbs": ['want', 'need', 'like'],
                      "categories": []},
@@ -229,10 +229,10 @@ class PatternUtil:
                 pattern['categories'] = categories
             # Write out to the JSON csv file
             patternDF = pd.DataFrame(patterns, columns=['name', 'title', 'verbs', 'categories'])
-            path = os.path.join('data', 'story', 'patterns.csv')
+            path = os.path.join('data', 'text', args.case_name, 'patterns.csv')
             patternDF.to_csv(path_or_buf=path, encoding='utf-8', index=False)
             # # Write to a json file
-            path = os.path.join('data', 'story', 'patterns.json')
+            path = os.path.join('data', 'text', args.case_name, 'patterns.json')
             patternDF.to_json(path, orient='records')
             # Print
             print("Extracting patterns and write outputs to data/story/patterns.json completes!")
