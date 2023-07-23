@@ -18,4 +18,11 @@ In terms of data workflow, the backend takes raw texts collected from the datase
 # Build Instruction
 Please refer to `README` in `backend` and `frontend` folders respectively.
 
+# Publication
+If you are interested in our project and want to know about it, see our paper:
+Weng M-H, Wu S, Dyer M. AI Augmented Approach to Identify Shared Ideas from Large Format Public Consultation. Sustainability. 2021; 13(16):9310. 
+https://doi.org/10.3390/su13169310
+
+
+
 
